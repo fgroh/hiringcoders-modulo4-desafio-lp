@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Black Friday da Travel</title>
+
+
+    <script>
+        function salvarForm() {
+            if (localStorage.cont) {
+                localStorage.cont = Number(localStorage.cont) + 1;
+            } else {
+                localStorage.cont = 1;
+            }
+
+            cad = document.getElementById('email').value;
+            localStorage.setItem("cad_" + localStorage.cont, cad);
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Travel</h2>
+        </header>
+        <video src="./assets/travel-video1.mp4" muted loop autoplay></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Travel friday</h2>
+            <h3>Tenha histórias para contar,<br>não coisas para mostrar</h3>
+            <p>As melhores praias do mundo com até 89% de desconto na nossa Black Friday.<br>
+                Cadastre-se e ative os descontos. </p>
+            <div class="cta1">
+                <input type="email" class="campo-email" id="email" placeholder="Insira o seu melhor e-mail">
+                <button type="submit" onclick="salvarForm()" class="cta-button" id="button">Cadastrar</button>
+            </div>
+        </div>
+
+        <section id="display_data">
+
+
+        </section>
+
+
+
+            <ul class="social">
+                <li><a target="_blank" href="https://www.facebook.com/frankgroh.borges/"><img
+                            src="./assets/facebook.png" alt="" width="25px" /></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/frankborges_/"><img src="./assets/instagram.png"
+                            alt="" width="25px" /></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/frank-groh-borges/"><img
+                            src="./assets/linkedin.png" alt="" width="25px" /></a></li>
+                <li><a target="_blank" href="https://github.com/fgroh"><img src="./assets/github.png" alt=""
+                            width="25px" /></a></li>
+            </ul>
+
+
+
+ 
+
+    </section>
+
+
+</body>
+
+</html>
